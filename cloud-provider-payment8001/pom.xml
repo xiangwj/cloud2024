@@ -31,7 +31,7 @@
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
         </dependency>
-        <!-- Swagger3  开始 调用方式 http://localhost:5555/swagger-ui/index.html -->
+        <!-- Swagger3  开始 调用方式 http://localhost:8001/swagger-ui/index.html -->
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
