@@ -3,6 +3,7 @@ server:
 
 # ==========applicationName + druid-mysql8 driver===================
 spring:
+
   application:
     name: cloud-payment-service
 
@@ -19,4 +20,4 @@ mybatis:
   type-aliases-package: com.atguigu.cloud.entities
   configuration:
     map-underscore-to-camel-case: true
-
+debug: true
