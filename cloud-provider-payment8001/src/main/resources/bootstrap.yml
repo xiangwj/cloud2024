@@ -10,4 +10,5 @@ spring:
       config:
         profile-separator: '-' # default value is ","，we update '-'
         format: yaml
-        acl-token:
+        watch:
+          wait-time: 3
