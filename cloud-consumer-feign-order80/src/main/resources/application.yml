@@ -21,8 +21,13 @@ spring:
           default:
             connect-timeout: 3000
             read-timeout: 3000
-
-
       httpclient:
         hc5:
+          enabled: true
+
+      compression:
+        request:
+          enabled: true
+          mime-types: text/xml,application/xml,application/json
+        response:
           enabled: true
