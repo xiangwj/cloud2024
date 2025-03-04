@@ -22,3 +22,7 @@ spring:
             connect-timeout: 3000
             read-timeout: 3000
 
+
+      httpclient:
+        hc5:
+          enabled: true
