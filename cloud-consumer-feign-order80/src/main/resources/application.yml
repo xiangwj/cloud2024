@@ -19,8 +19,8 @@ spring:
             connect-timeout: 2000
             read-timeout: 2000
           default:
-            connect-timeout: 3000
-            read-timeout: 3000
+            connect-timeout: 2000
+            read-timeout: 2000
       httpclient:
         hc5:
           enabled: true
@@ -31,3 +31,10 @@ spring:
           mime-types: text/xml,application/xml,application/json
         response:
           enabled: true
+logging:
+  level:
+    com:
+      atguigu:
+        cloud:
+          apis:
+            PayFeignApi: DEBUG
