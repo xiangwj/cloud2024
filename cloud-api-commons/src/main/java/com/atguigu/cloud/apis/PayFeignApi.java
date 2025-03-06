@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@FeignClient("cloud-payment-service")//申明接口用于连接哪个服务
+//@FeignClient("cloud-payment-service")//申明接口用于连接哪个服务
+@FeignClient("cloud-gateway")//申明接口用于连接哪个服务
 public interface PayFeignApi {
     @PostMapping(value = "/pay/add")
     public ResultData<String> addPay(@RequestBody PayDTO payDTO);
@@ -43,5 +44,20 @@ public interface PayFeignApi {
 
     @GetMapping(value = "/pay/micrometer/{id}")
     public String myMicrometer(@PathVariable("id") Integer id);
+
+    /**
+     * GateWay进行网关测试案例01
+     * @param id
+     * @return
+     */
+
+    @GetMapping(value = "/pay/gateway/get/{id}")
+    public ResultData<PayDTO> getById(@PathVariable("id") Integer id);
+    /**
+     * GateWay进行网关测试案例02
+     * @return
+     */
+    @GetMapping(value = "/pay/gateway/info")
+    public ResultData<String> getGatewayInfo();
 }
 
