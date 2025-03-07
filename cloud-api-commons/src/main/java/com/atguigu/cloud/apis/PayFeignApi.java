@@ -2,6 +2,7 @@ package com.atguigu.cloud.apis;
 
 import com.atguigu.cloud.entities.PayDTO;
 import com.atguigu.cloud.resp.ResultData;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
@@ -59,5 +60,8 @@ public interface PayFeignApi {
      */
     @GetMapping(value = "/pay/gateway/info")
     public ResultData<String> getGatewayInfo();
+
+    @GetMapping(value = "/pay/gateway/filter")
+    public ResultData<String> getGatewayFilter(HttpServletRequest request);
 }
 
