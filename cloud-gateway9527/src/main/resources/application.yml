@@ -37,7 +37,8 @@ spring:
             - Path=/pay/gateway/filter/**
             #- Path=/XYZ/abc/{segment}
           filters:
-            - RedirectTo=302,http://www.atguigu.com
+            - My=atguigu
+            #- RedirectTo=302,http://www.atguigu.com
             #- SetPath=/pay/gateway/{segment}  # {segment}表示占位符，你写abc也行但要上下一致
             #- AddRequestHeader=X-Request-atguigu1,atguiguValue1  # 请求头kv，若一头含有多参则重写一行设置
             #- AddRequestHeader=X-Request-atguigu2,atguiguValue2
